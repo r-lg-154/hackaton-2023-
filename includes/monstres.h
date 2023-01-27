@@ -1,3 +1,4 @@
+#pragma once
 #include "objets.h"
 
 class Monsters : public Objets

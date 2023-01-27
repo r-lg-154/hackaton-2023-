@@ -1,6 +1,8 @@
+#pragma once
 #include <iostream>
 #include <map>
 #include <string>
+
 
 class Objets 
 {
@@ -9,20 +11,20 @@ class Objets
 
     public: 
 
-    char getChar() const
+    virtual char getChar() const
     {
-        return (*this).character;
+        return character;
     }
 
     int getPos() const
     {
-        return (*this).position;
+        return position;
     }
 
-    virtual void interaction (Player player)
+    /*virtual void interaction (Player player)
     {
 
-    }
+    }*/
 
 };
 
@@ -34,12 +36,12 @@ class Player : public Objets
 
     int getPoints()
     {
-        return (*this).points;
+        return points;
     }
 
     void changePoints(int x)
     {
-        (*this).points = (*this).points -x;
+        points = points -x;
     }
 
 };
