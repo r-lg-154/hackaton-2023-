@@ -2,25 +2,30 @@
 
 #include <iostream>
 
-class Player 
+#include "objets.h"
+
+
+class Weapon : public Objets
 {
     private:
-        int position;
-        short int lifeLevel;
-        Weapon weapon;
-        int gold;
+        short int damagePerHit;
     public:
-        friend int getPosition(Player player );
-        friend short int getLifeLevel(Player player);
-        friend int getGold(Player player);
+        friend short int getDamagePerHit(Weapon weapon);
 };
 
-class Weapon
+
+class Player : public Objets
 {
+    // Les attributs position et character sont déjà dans la classe objet
     private:
-        char weaponName;
-        int damagePerHit;
+        // Niveau de vie : entier de 0 à 10, commence à 10, meurt à 0
+        short int lifeLevel = 10;
+        Weapon weapon;
+        // Nombre de golds : commence à 0
+        int gold = 0;
     public:
+        friend short int getLifeLevel(Player player);
+        friend int getGold(Player player);
         friend Weapon getWeapon(Player player);
 };
 
