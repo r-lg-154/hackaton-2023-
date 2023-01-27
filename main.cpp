@@ -1,10 +1,11 @@
 #include <iostream>
-#include"Room.h"
-#include "objets.h"
-#include "display.h"
-#include "Game.h"
+#include"includes/Room.h"
+#include "includes/objets.h"
+#include "includes/display.h"
+#include "includes/Game.h"
 
-int main(int, char**) {
+int main(int, char**) 
+{
 
     Room Room_test(5,5, 0, 0);
     Room_test.create_room();
@@ -16,9 +17,5 @@ int main(int, char**) {
     jeu.set_Rooms(temp);
 
     display(jeu);
-    
-
-
-
 
 }
