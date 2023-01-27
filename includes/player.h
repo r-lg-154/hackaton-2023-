@@ -22,10 +22,7 @@ class Objets
         return (*this).position;
     }
 
-    virtual void interaction (Objets objet, Player player)
-    {
-
-    }
+    virtual void interaction (Objets objet, Player player);
 
 };
 
@@ -93,4 +90,4 @@ class Player: public Objets
 void interaction(Weapon weapon, Player player)
 {
     modifyLifeLevel(player, getLifeLevel(player) - getDamagePerHit(weapon));
-}   
+}
