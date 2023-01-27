@@ -42,7 +42,7 @@ bool exists(std::map<char,char> dict, char key)
     return true;
     }
 
-char getInput(std::vector<char> buffer)
+char getInput(std::vector<char> const & buffer)
 {   
     if ((buffer.size() > 0) and (exists(actions,buffer[0])))
     {

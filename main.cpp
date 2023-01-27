@@ -4,6 +4,7 @@
 
 int main()
 {
+
     bool gameIsRunning{true};
     char termInput;
     char input;
@@ -25,15 +26,19 @@ int main()
         input = getInput(buffer);
         buffer.clear();
 
-        // Event management
-        //std::cout << "input envoyé :" << input << "\n";
-
-        action(input);
-
         if (input == 'x')
         {
             gameIsRunning = false;
+            input = 'n';
         }
+        
+        // Event management
+        
+        if (input != 'n')
+        {
+            action(input);
+        }
+        
     }
 
     return EXIT_SUCCESS;
