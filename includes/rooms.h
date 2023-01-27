@@ -1,4 +1,4 @@
-#include "objets.h"
+#include "player.h"
 
 class Wall_h : public Objets
 {
