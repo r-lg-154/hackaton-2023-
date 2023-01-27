@@ -129,7 +129,7 @@ class Warrior : public Monsters
         if (b == true)
         {
             Weapon weapon;
-            weapon.place_((*this).getPos()) ;
+            //weapon.place_((*this).getPos()) ;
         }
 
         avance_g(direction, (*this));

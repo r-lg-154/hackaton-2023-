@@ -44,7 +44,6 @@ char Room::get_char(const int k) const{
 }
 
 
-
 Room::Room(int L, int l, int x, int y){
     _L = L;
     _l = l;
@@ -62,13 +61,14 @@ void Room::create_room(){
             }
             else if(y == 0 || y == _l-1){
                 Wall_h *wall_h = new Wall_h();
-                instances.push_back(wall_h);
+                instances.push_back(dynamic_cast<Objets*>(wall_h));
             }
             else{
                 Voide *voide = new Voide();
-                instances.push_back(voide);
+                instances.push_back(dynamic_cast<Objets*>(voide));
             }
         }
     }
 
 }
+
