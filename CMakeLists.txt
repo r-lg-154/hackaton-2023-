@@ -11,12 +11,12 @@ include_directories("./includes")
 FILE(GLOB mainSources *.cpp)
 FILE(GLOB cppSources cpp/*.cpp)
 
-add_executable (empty_project
+add_executable (Rogue
         ${mainSources}
         ${cppSources}
 )
 
-target_include_directories(empty_project PUBLIC
+target_include_directories(Rogue PUBLIC
         "${PROJECT_SOURCE_DIR}/includes")
         
 
