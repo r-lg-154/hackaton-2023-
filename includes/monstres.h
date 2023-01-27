@@ -1,4 +1,4 @@
-#include "objets.h"
+#include "player.h"
 
 class Monsters : public Objets
 {
@@ -56,7 +56,7 @@ class IceMonster : public Monsters
         }
         else 
         {
-            player.changePoints(30);
+            modifyLifeLevel(player, getLifeLevel(player) - 30);
         }
     }
 };
@@ -93,7 +93,7 @@ class HobGoblin : public Monsters
         }
         else 
         {
-            player.changePoints(40);
+            modifyLifeLevel(player, getLifeLevel(player) - 40);
         }
     }
 };
@@ -145,7 +145,7 @@ class Warrior : public Monsters
         }
         else 
         {
-            player.changePoints(20);
+            modifyLifeLevel(player, getLifeLevel(player) - 20);
         }
     }
 

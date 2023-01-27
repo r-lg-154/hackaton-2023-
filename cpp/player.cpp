@@ -5,25 +5,12 @@
 #include "player.h"
 
 
-// Définition des méthodes de récupération des attributs en private
-short int getLifeLevel(Player player)
+// Gestion des contacts
+void contact(Player player, Objets objet)
 {
-    return player.lifeLevel;
+    int positionPlayer = player.getPos();
+    int positionObjet = objet.getPos();
+
+    // Lancement du comportement
+    objet.interaction(objet, player);
 }
-
-int getGold(Player player)
-{
-    return player.gold;
-}
-
-Weapon getWeapon(Player player)
-{
-    return player.weapon;
-}
-
-short int getDamagePerHit(Weapon weapon)
-{
-    return weapon.damagePerHit;
-}
-
-
