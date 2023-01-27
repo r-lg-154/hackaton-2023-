@@ -1,20 +1,22 @@
 #pragma once
 #include<vector>
-#include"Objets.h"
+#include"objets.h"
 
 
 class Room
 {
 private:
-    int _x = 0;
-    int _y = 0;
-    int _l = 0;
-    int _L = 0;
+    int _x;
+    int _y;
+    int _l;
+    int _L;
 
-    std::vector<Objets> instaces;
+    std::vector<Objets *> instances;
+
 public:
-    Room();
-    
+
+    Room(int L, int l, int x, int y);
+
     int x() const;
     int y() const;
     int l() const;
@@ -24,9 +26,9 @@ public:
     void l(const int l);
     void L(const int L);
 
-    
+    void create_room();
 
-    void set_Room(const std::vector<Objets> Room);
+    std::vector<Objets*> get_Objets() const {return instances;};
+    void set_Room(const std::vector<Objets*> Room);
     char get_char(const int k) const;
-
 };

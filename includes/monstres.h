@@ -1,4 +1,4 @@
-#include "player.h"
+#include "objets.h"
 
 class Monsters : public Objets
 {
@@ -128,7 +128,7 @@ class Warrior : public Monsters
         if (b == true)
         {
             Weapon weapon;
-            weapon.place_((*this).getPos()) ;
+            //weapon.place_((*this).getPos()) ;
         }
 
         avance_g(direction, (*this));
