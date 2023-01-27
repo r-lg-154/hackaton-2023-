@@ -12,5 +12,5 @@ void contact(Player player, Objets objet)
     int positionObjet = objet.getPos();
 
     // Lancement du comportement
-    objet.interaction(objet, player);
+    getWeapon(player).interactionWeapon(getWeapon(player), player);
 }
