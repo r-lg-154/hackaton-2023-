@@ -1,6 +1,6 @@
-#include"Room.h"
-#include"objets.h"
-#include"wall.h"
+#include"/home/patate/hackaton-2023-/includes/Room.h"
+#include"/home/patate/hackaton-2023-/includes/objets.h"
+
 
 int Room::x() const{
     return _x;
@@ -56,16 +56,16 @@ void Room::create_room(){
 
     for(int x = 0; x < _L; x++){
         for(int y =0; y< _l; y++){
-            if(x == 0 || x == _L){
+            if(x == 0 || x == _L-1){
+                Wall_v *wall_v = new Wall_v();
+                instances.push_back(dynamic_cast<Objets*>(wall_v));
+            }
+            else if(y == 0 || y == _l-1){
                 Wall_h *wall_h = new Wall_h();
                 instances.push_back(wall_h);
             }
-            else if(y == 0 || y == _l){
-                Wall_v *wall_v = new Wall_v();
-                instances.push_back(wall_v);
-            }
             else{
-                Void *voide = new Void();
+                Voide *voide = new Voide();
                 instances.push_back(voide);
             }
         }

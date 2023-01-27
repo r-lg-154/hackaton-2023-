@@ -28,6 +28,7 @@ public:
 
     void create_room();
 
+    std::vector<Objets*> get_Objets() const {return instances;};
     void set_Room(const std::vector<Objets*> Room);
     char get_char(const int k) const;
 
