@@ -1,5 +1,5 @@
-#include"/home/patate/hackaton-2023-/includes/Room.h"
-#include"/home/patate/hackaton-2023-/includes/objets.h"
+#include "Room.h"
+#include "objets.h"
 
 
 int Room::x() const{
@@ -70,5 +70,18 @@ void Room::create_room(){
             }
         }
     }
+}
 
+int Room::get_pos(const char treasure) const
+{
+    int i{0};
+    for(Objets* o : get_Objets())
+    {
+        if(o->getChar() == treasure)
+        {
+            return i;
+        }
+        i++;
+    }
+    return -1;
 }

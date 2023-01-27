@@ -6,15 +6,15 @@
 #include "includes/display.h"
 #include "includes/Game.h"
 
+bool gameIsRunning{true};
+char termInput;
+char input;
+std::vector<char> buffer;
 
 int main()
 {
-
-    bool gameIsRunning{true};
-    char termInput;
-    char input;
-    std::vector<char> buffer;
-
+    Game jeu;
+        
     while(gameIsRunning)
     {
 
@@ -41,7 +41,7 @@ int main()
         
         if (input != 'n')
         {
-            action(input);
+            action(jeu, input);
         }
         
     }
